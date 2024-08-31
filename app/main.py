@@ -1,6 +1,5 @@
 import sys
 
-
 def main():
     # You can use print statements as follows for debugging, they'll be visible when running tests.
     print("Logs from your program will appear here!", file=sys.stderr)
@@ -18,8 +17,8 @@ def main():
 
     with open(filename) as file:
         file_contents = file.read()
-        
-            # Tokenize the input for parentheses
+
+    # Tokenize the input for parentheses
     tokens = []
     for char in file_contents:
         if char == '(':
@@ -31,10 +30,8 @@ def main():
     if tokens:
         for token in tokens:
             print(token)
-
-     else:
-         print("EOF  null") # Placeholder, remove this line when implementing the scanner
-
+    else:
+        print("EOF  null")
 
 if __name__ == "__main__":
     main()

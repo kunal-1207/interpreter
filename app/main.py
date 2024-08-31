@@ -18,11 +18,21 @@ def main():
 
     with open(filename) as file:
         file_contents = file.read()
+        
+            # Tokenize the input for parentheses
+    tokens = []
+    for char in file_contents:
+        if char == '(':
+            tokens.append("L_PAREN  (")
+        elif char == ')':
+            tokens.append("R_PAREN  )")
 
-    # Uncomment this block to pass the first stage
-    if file_contents:
-         raise NotImplementedError("Scanner not implemented")
-    else:
+    # Print tokens or EOF if no tokens are found
+    if tokens:
+        for token in tokens:
+            print(token)
+
+     else:
          print("EOF  null") # Placeholder, remove this line when implementing the scanner
 
 

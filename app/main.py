@@ -22,9 +22,9 @@ def main():
     tokens = []
     for char in file_contents:
         if char == '(':
-            tokens.append("L_PAREN  (")
+            tokens.append("LEFT_PAREN  ( null")
         elif char == ')':
-            tokens.append("R_PAREN  )")
+            tokens.append("RIGHT_PAREN  ) null")
 
     # Print tokens or EOF if no tokens are found
     if tokens:

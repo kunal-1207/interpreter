@@ -15,12 +15,15 @@ def main():
     for x in file_contents:
     if x == "(":
             print("LEFT_PAREN ( null")
+    
     elif x == ")":
-            print("RIGHT_PAREN ) null")
+    print("RIGHT_PAREN ) null")
+    
     elif x == "{":
-            print("LEFT_BRACE { null")
+    print("LEFT_BRACE { null")
+
     elif x == "}":
-            print("RIGHT_BRACE } null")
+    print("RIGHT_BRACE } null")
     print("EOF  null")  # This should always run to ensure EOF is printed
 
 if __name__ == "__main__":

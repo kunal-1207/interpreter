@@ -43,7 +43,7 @@ def main():
         for token in tokens:
             print(token)
     else:
-        print("EOF null")  # Ensure there's a space between EOF and null
+        print("EOF         null")  # Ensure there's a space between EOF and null
 
 if __name__ == "__main__":
     main()

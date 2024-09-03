@@ -17,6 +17,7 @@ def main():
         
     with open(filename) as file:
         file_contents = file.read()
+        
     if file_contents:
         raise NotImplementedError("Scanner not implemented")
     else:

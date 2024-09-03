@@ -8,6 +8,7 @@ class Token:
     
     def __str__(self):
         return f"{self.type}  {self.value} {self.literal}"
+
 def main():
     # You can use print statements as follows for debugging, they'll be visible when running tests.
     print("Logs from your program will appear here!", file=sys.stderr)
@@ -22,11 +23,13 @@ def main():
     if command != "tokenize":
         print(f"Unknown command: {command}", file=sys.stderr)
         exit(1)
-
-    with open(filename) as file:
+        
+    try:
+        file = open(filename)
         file_contents = file.read()
-    except FileNotFoundError:
-        print(f"File not found: {filename}", file=sys.stderr)
+        file.close()
+    except IOError:
+        print(f"Could not open or read file:{filename}", file=sys.stderr)
         exit(1)
 
     # Tokenize the input for parentheses

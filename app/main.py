@@ -20,9 +20,10 @@ def main():
         )  # Placeholder, remove this line when implementing the scanner
     for c in file_contents:
         if c == "(":
-            print("LEFT_PAREN ( null")
+            print("LEFT_PAREN, ( ,null")
         if c == ")":
-            print("RIGHT_PAREN ) null")
+            print("RIGHT_PAREN, ) ,null")
     print("EOF  null")
+    
 if __name__ == "__main__":
     main()

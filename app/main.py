@@ -14,6 +14,10 @@ def main():
 
     with open(filename) as file:
         file_contents = file.read()
+        for (
+            character
+        ) in file_contents:
+            if character == "(":
 
     for x in file_contents:
         if x == "(":

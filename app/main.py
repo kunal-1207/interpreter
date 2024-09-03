@@ -29,5 +29,6 @@ def main():
         if c == ")":
             print("RIGHT_PAREN ) null")
     print("EOF  null")
+
 if __name__ == "__main__":
     main()

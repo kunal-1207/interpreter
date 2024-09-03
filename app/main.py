@@ -22,7 +22,7 @@ def main():
     else:
         print(
             "EOF  null"
-        )  # Placeholder, remove this line when implementing the scanner
+        )
     for c in file_contents:
         if c == "(":
             print("LEFT_PAREN ( null")

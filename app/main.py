@@ -1,5 +1,13 @@
 import sys
 
+class Token:
+    def __init__(self, type, value, literal):
+        self.type = type
+        self.value = value
+        self.literal = literal
+    
+    def __str__(self):
+        return f"{self.type}  {self.value} {self.literal}"
 def main():
     # You can use print statements as follows for debugging, they'll be visible when running tests.
     print("Logs from your program will appear here!", file=sys.stderr)
@@ -17,6 +25,9 @@ def main():
 
     with open(filename) as file:
         file_contents = file.read()
+    except FileNotFoundError:
+        print(f"File not found: {filename}", file=sys.stderr)
+        exit(1)
 
     # Tokenize the input for parentheses
     tokens = []

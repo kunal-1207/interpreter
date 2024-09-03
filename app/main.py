@@ -16,6 +16,11 @@ def main():
             print("LEFT_PAREN ( null")
         elif character == ")":
             print("RIGHT_PAREN ) null")
+    for character in file_contents:  # This loop should always run, even if file_contents is empty
+        if character == "{":
+            print("LEFT_PAREN ( null")
+        elif character == "}":
+            print("RIGHT_PAREN ) null")
     print("EOF  null")  # This should always run to ensure EOF is printed
 
 if __name__ == "__main__":

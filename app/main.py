@@ -36,9 +36,9 @@ def main():
     tokens = []
     for char in file_contents:
         if char == '(':
-            tokens.append("LEFT_PAREN", "(", "null")
+            tokens.append(Token("LEFT_PAREN", "(", "null"))
         elif char == ')':
-            tokens.append("RIGHT_PAREN", ")", "null")
+            tokens.append(Token("RIGHT_PAREN", ")", "null"))
 
     # Print tokens or EOF if no tokens are found
     if tokens:

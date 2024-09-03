@@ -44,7 +44,7 @@ def main():
     if tokens:
         for token in tokens:
             print(token)
-    else:
+        else:
         print("EOF  null")
 
 if __name__ == "__main__":

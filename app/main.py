@@ -44,6 +44,9 @@ def main():
             print(token)
     else:
         print("EOF  null")  # Ensure there's a space between EOF and null
+    
+    # Debug: Print a line to ensure output consistency
+    print("Debug: End of output", file=sys.stderr)
 
 if __name__ == "__main__":
     main()

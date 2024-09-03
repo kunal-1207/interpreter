@@ -7,7 +7,7 @@ class Token:
         self.literal = literal
     
     def __str__(self):
-        return f"{self.type}  {self.value} {self.literal}"
+        return f"{self.type} {self.value} {self.literal}"
 
 def main():
     # You can use print statements as follows for debugging, they'll be visible when running tests.

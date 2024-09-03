@@ -11,16 +11,16 @@ def main():
         exit(1)
     with open(filename) as file:
         file_contents = file.read()
-    for character in file_contents:  # This loop should always run, even if file_contents is empty
-        if character == "(":
+
+    for x in file_contents:
+    if x == "(":
             print("LEFT_PAREN ( null")
-        elif character == ")":
+    elif x == ")":
             print("RIGHT_PAREN ) null")
-    for character in file_contents:  # This loop should always run, even if file_contents is empty
-        if character == "{":
-            print("LEFT_BRACE ( null")
-        elif character == "}":
-            print("RIGHT_BRACE ) null")
+    elif x == "{":
+            print("LEFT_BRACE { null")
+    elif x == "}":
+            print("RIGHT_BRACE } null")
     print("EOF  null")  # This should always run to ensure EOF is printed
 
 if __name__ == "__main__":

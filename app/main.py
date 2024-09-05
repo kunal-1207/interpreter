@@ -36,11 +36,12 @@ def main():
             print("STAR * null")
         elif x == ".":
             print("DOT . null")
-        elif x ==",":
+        elif x == ",":
             print("COMMA , null")
-        elif x =="+":
+        elif x == "+":
             print("PLUS + null")
-        
+        elif x == "*":
+            print("STAR * null")
     print("EOF  null")  # This should always run to ensure EOF is printed
 
 

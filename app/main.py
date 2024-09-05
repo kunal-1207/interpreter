@@ -25,8 +25,11 @@ def main():
             for x in file_contents:
                 if x == "(":
                     print("LEFT_PAREN ( null")
-                elif x == ")":
-                 print("RIGHT_PAREN ) null")
+                elif character == ")":
+                    print("RIGHT_PAREN ) null")
+
+        elif x == ")":
+            print("RIGHT_PAREN ) null")
         elif x == "{":
             print("LEFT_BRACE { null")
         elif x == "}":
@@ -39,8 +42,6 @@ def main():
             print("COMMA , null")
         elif x == "+":
             print("PLUS + null")
-        elif x == "*":
-            print("STAR * null")
     print("EOF  null")  # This should always run to ensure EOF is printed
 
 

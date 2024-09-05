@@ -32,6 +32,15 @@ def main():
             print("LEFT_BRACE { null")
         elif x == "}":
             print("RIGHT_BRACE } null")
+        elif x == "*":
+            print("STAR * null")
+        elif x == ".":
+            print("DOT . null")
+        elif x ==",":
+            print("COMMA , null")
+        elif x =="+":
+            print("PLUS + null")
+        
     print("EOF  null")  # This should always run to ensure EOF is printed
 
 

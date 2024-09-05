@@ -27,9 +27,6 @@ def main():
                     print("LEFT_PAREN ( null")
                 elif character == ")":
                     print("RIGHT_PAREN ) null")
-
-        elif x == ")":
-            print("RIGHT_PAREN ) null")
         elif x == "{":
             print("LEFT_BRACE { null")
         elif x == "}":

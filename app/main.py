@@ -25,9 +25,8 @@ def main():
             for x in file_contents:
                 if x == "(":
                     print("LEFT_PAREN ( null")
-                elif character == ")":
                 elif x == ")":
-                print("RIGHT_PAREN ) null")
+                 print("RIGHT_PAREN ) null")
         elif x == "{":
             print("LEFT_BRACE { null")
         elif x == "}":

@@ -1,4 +1,8 @@
 import sys
+from app.scanner.scanner import Scanner
+from app.parser.parser import Parser
+from app.ast.ast_printer import AstPrinter
+from app.interpreter.interpreter import Interpreter
 
 
 def main():
@@ -6,42 +10,37 @@ def main():
         print("Usage: ./your_program.sh tokenize <filename>", file=sys.stderr)
         exit(1)
 
-
     command = sys.argv[1]
     filename = sys.argv[2]
 
-
-    if command != "tokenize":
+    if command != "tokenize" and command != "parse" and command != "ast-print" and command != "interpret":
         print(f"Unknown command: {command}", file=sys.stderr)
         exit(1)
 
     with open(filename) as file:
         file_contents = file.read()
-    for (
-        character
-    ) in file_contents:  # This loop should always run, even if file_contents is empty
-        if character == "(":
-
-            for x in file_contents:
-                if x == "(":
-                    print("LEFT_PAREN ( null")
-                elif character == ")":
-                    
-        elif x == ")":
-                print("RIGHT_PAREN ) null")
-        elif x == "{":
-            print("LEFT_BRACE { null")
-        elif x == "}":
-            print("RIGHT_BRACE } null")
-        elif x == "*":
-            print("STAR * null")
-        elif x == ".":
-            print("DOT . null")
-        elif x == ",":
-            print("COMMA , null")
-        elif x == "+":
-            print("PLUS + null")
-    print("EOF  null")  # This should always run to ensure EOF is printed
+    
+    scanner = Scanner(file_contents)
+    tokens = scanner.scan_tokens()
+    
+    if command == "tokenize":
+        for token in tokens:
+            print(token)
+    elif command == "parse" or command == "ast-print" or command == "interpret":
+        parser = Parser(tokens)
+        statements = parser.parse()
+        if command == "parse":
+            for statement in statements:
+                print(statement)
+        elif command == "ast-print":
+            # For simplicity, we'll just print the first statement's expression
+            if statements:
+                printer = AstPrinter()
+                if hasattr(statements[0], 'expression'):
+                    print(printer.print(statements[0].expression))
+        else:
+            interpreter = Interpreter()
+            interpreter.interpret(statements)
 
 
 if __name__ == "__main__":

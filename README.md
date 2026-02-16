@@ -150,5 +150,3 @@ python app/main.py simple_test.lox
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-Built with ❤️ as part of the [CodeCrafters Interpreter Challenge](https://app.codecrafters.io/courses/interpreter/overview).
